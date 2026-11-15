@@ -1,5 +1,13 @@
 /bin/
 .env
+.env.*
+!.env.example
 *.db
 *.db-shm
 *.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm

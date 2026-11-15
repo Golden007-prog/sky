@@ -7,7 +7,7 @@ A Go CLI for observed aircraft, nearby traffic, and regional airline activity us
 Requires Go 1.24 or newer.
 
 ```sh
-go build -buildvcs=false -o bin/sky ./cmd/sky
+go build -o bin/sky ./cmd/sky
 ./bin/sky --help
 ```
 
@@ -63,3 +63,15 @@ go vet ./...
 Tests use local HTTP servers and require no provider credentials or live network.
 
 Data source: [adsb.lol API](https://www.adsb.lol/docs/open-data/api), published under ODbL 1.0. Review the provider's license and current access limits before redistributing data.
+
+## Project direction and progress
+
+- [Roadmap](docs/ROADMAP.md): milestones, deliverables, dependencies, and completion criteria.
+- [Current status](docs/STATUS.md): what works, current focus, open decisions, and next steps.
+- [Initial backlog](docs/BACKLOG.md): issue-ready tasks for GitHub.
+- [GitHub setup](docs/GITHUB.md): repository, milestones, board, and required checks.
+- [Recovery guide](docs/RECOVERY.md): checkpoints, safe reverts, and future database recovery.
+- [Contributing](CONTRIBUTING.md): branch/PR workflow and verification.
+- [Changelog](CHANGELOG.md) and [architecture decisions](docs/decisions/0001-local-go-cli.md).
+
+The current implementation is a prototype. GitHub hosting is planned; no public release has been published.
