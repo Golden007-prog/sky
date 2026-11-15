@@ -8,10 +8,10 @@ This is an issue seed, not evidence that GitHub issues already exist. Copy each 
 
 - Create the chosen GitHub repo and push `main` plus both checkpoint tags.
 - Create M0–M5 milestones and labels: `type:feature`, `type:bug`, `type:docs`, `type:chore`, `priority:p0`, `priority:p1`, `priority:p2`, `blocked`, `needs-decision`.
-- Create a project board with Backlog, Ready, In progress, In review, and Done.
+- Use status labels for Backlog, Ready, In progress, and In review. Create a project board with those columns plus Done when Projects permissions are available.
 - Create the M0–M1 issues in this document and assign milestones.
 - Confirm CI passes remotely; configure PR checks and block force pushes where supported by account policy.
-- Done when the remote URL, milestone/board links, and first green run are recorded in STATUS.
+- Done when the remote URL, milestone/progress links, and first green run are recorded in STATUS.
 - Rollback: remove a mistaken remote configuration locally; keep commits/tags. Do not delete the repository as a routine rollback.
 
 ### M0-02 — Stabilize existing CLI/provider contracts (M)

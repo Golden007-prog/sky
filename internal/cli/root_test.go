@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"sky/internal/provider"
+	"github.com/Mickyj70/sky/internal/provider"
 )
 
 func TestInvalidInput(t *testing.T) {

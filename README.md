@@ -1,12 +1,27 @@
 # Sky
 
+[![CI](https://github.com/Mickyj70/sky/actions/workflows/ci.yml/badge.svg)](https://github.com/Mickyj70/sky/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 A Go CLI for observed aircraft, nearby traffic, and regional airline activity using [adsb.lol](https://www.adsb.lol/).
 
-## Build
+## Install the development version
+
+Requires Go 1.24 or newer:
+
+```sh
+go install github.com/Mickyj70/sky/cmd/sky@main
+```
+
+Add your Go binary directory (`go env GOPATH` plus `/bin`, unless `GOBIN` is set) to PATH. This installs the current development branch; no stable release or prebuilt binaries are available yet.
+
+## Build from source
 
 Requires Go 1.24 or newer.
 
 ```sh
+git clone https://github.com/Mickyj70/sky.git
+cd sky
 go build -o bin/sky ./cmd/sky
 ./bin/sky --help
 ```
@@ -74,4 +89,14 @@ Data source: [adsb.lol API](https://www.adsb.lol/docs/open-data/api), published 
 - [Contributing](CONTRIBUTING.md): branch/PR workflow and verification.
 - [Changelog](CHANGELOG.md) and [architecture decisions](docs/decisions/0001-local-go-cli.md).
 
-The current implementation is a prototype. GitHub hosting is planned; no public release has been published.
+The current implementation is a prototype. Track work in [issues](https://github.com/Mickyj70/sky/issues) and [milestones](https://github.com/Mickyj70/sky/milestones). No stable release has been published.
+
+## Contributing
+
+Contributions are welcome. Start with [good first issues](https://github.com/Mickyj70/sky/labels/good%20first%20issue), read [CONTRIBUTING.md](CONTRIBUTING.md), and open a focused pull request from your fork. Discuss larger changes in an issue before implementing them. Contributors do not need API credentials to run the offline test suite.
+
+Please follow our [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities using the [security policy](SECURITY.md).
+
+## License
+
+Sky source code is licensed under [MIT](LICENSE). Flight data has separate provider terms, including adsb.lol's ODbL 1.0; MIT does not relicense upstream data.

@@ -20,4 +20,4 @@ Sky tracks aircraft from external HTTP APIs. Current needs are lookups, terminal
 
 The initial app needs no server deployment. Tracking runs only while the process runs. Each user's provider limits and credentials apply locally. A future hosted alerting service is a new architectural decision with operational and cost implications.
 
-Provider data terms are distinct from the source-code license. The project source license remains undecided until the owner selects one.
+Provider data terms are distinct from the source-code license. The project source uses MIT under the owner's instruction to publish as open source.

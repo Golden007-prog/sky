@@ -8,7 +8,7 @@ Updated: 2026-11-15. Current focus: **M0 — Project foundation**.
 - Prototype commit: `b0ff308`.
 - Recovery tag: `checkpoint/prototype-2026-11-15`.
 - Planning checkpoint: `checkpoint/planning-2026-11-15` (created with the planning commit).
-- Repository is local at present; no GitHub remote or public release exists.
+- Public repository: [Mickyj70/sky](https://github.com/Mickyj70/sky). Publication setup is in progress; no stable release exists.
 
 ## Progress
 
@@ -18,7 +18,7 @@ Updated: 2026-11-15. Current focus: **M0 — Project foundation**.
 | Local version control | Done | Main branch and prototype recovery tag |
 | Roadmap and recovery process | Prepared | `ROADMAP.md`, `RECOVERY.md`, `CONTRIBUTING.md` |
 | Automated checks | Local checks pass; hosted run pending | Workflow in `.github/workflows/ci.yml` |
-| GitHub repository and board | Pending destination/visibility | Recommended: private `Mickyj70/sky` initially |
+| Public GitHub repository | Created by owner; setup in progress | `Mickyj70/sky`; MIT license selected; Projects access unavailable |
 | Output contract and additional fixtures | Planned | M0-02 in `BACKLOG.md` |
 | Watchlists and scheduler | Not started | M1-01 through M1-04 |
 | History, commercial flight data, releases | Not started | M2–M5 |
@@ -31,15 +31,15 @@ Updated: 2026-11-15. Current focus: **M0 — Project foundation**.
 
 ## Next work, in order
 
-1. Confirm the GitHub destination and visibility; create remote, push commits/tags, and open the M0–M1 issues from `BACKLOG.md`.
+1. Push public repository commits/tags and create the M0–M1 issues from `BACKLOG.md`.
 2. Confirm the hosted CI run is green and configure required checks where supported.
 3. Finish M0-02: define compatibility/error behavior and cover missing provider contract cases.
 4. Design and implement M1-01: config paths, SQLite selection, schema, and backup/restore behavior.
 
 ## Open decisions
 
-- GitHub owner/repository and visibility: private `Mickyj70/sky` is the recommendation, not an already-created repository.
-- Code license: choose before public distribution; provider data license is separate.
+- GitHub Projects board: unavailable with current integration permissions; use milestones and status labels.
+- Code license: MIT. Provider data licenses remain separate.
 - SQLite driver: decide with platform/release requirements in M1-01.
 - Provider for scheduled flights: evaluate in M3; no paid provider is configured or required today.
 

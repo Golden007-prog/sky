@@ -11,3 +11,5 @@ Only actual releases receive versioned sections. The CLI currently reports 0.1.0
 - API key configuration, timeout/cancellation, rate-limit errors, and local HTTP tests.
 - Roadmap, initial backlog, current status, architectural decision, contribution/recovery guidance, and GitHub CI/issue/PR templates.
 - Local Git checkpoints for the working prototype and planning foundation.
+
+- MIT code license, public contribution/security policies, fork workflow, Dependabot, and canonical GitHub module path.

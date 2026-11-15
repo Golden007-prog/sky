@@ -7,7 +7,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"sky/internal/cli"
+	"github.com/Mickyj70/sky/internal/cli"
 )
 
 func main() {

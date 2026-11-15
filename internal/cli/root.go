@@ -14,8 +14,8 @@ import (
 	"text/tabwriter"
 	"time"
 
+	"github.com/Mickyj70/sky/internal/provider"
 	"github.com/spf13/cobra"
-	"sky/internal/provider"
 )
 
 var hexPattern = regexp.MustCompile(`^[0-9a-fA-F]{6}$`)

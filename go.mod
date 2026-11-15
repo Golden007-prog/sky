@@ -1,4 +1,4 @@
-module sky
+module github.com/Mickyj70/sky
 
 go 1.24.0
 

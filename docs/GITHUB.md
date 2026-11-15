@@ -1,40 +1,30 @@
-# GitHub setup plan
+# GitHub project workflow
 
-Recommendation: begin with a private repository named `sky` under the authenticated account `Mickyj70`. This is a proposed destination; it has not been created. Confirm the destination and visibility before publishing the local source.
+Repository: [Mickyj70/sky](https://github.com/Mickyj70/sky), public under the MIT code license. The owner created the empty repository because the integration cannot create repositories; repository-level setup can use the existing destination.
 
 GitHub hosts source, issues, checks, and releases. It does not run the tracking process continuously or back up local SQLite data.
 
-## Setup sequence
+## Progress tracking
 
-1. Create the repository with the selected visibility; do not initialize a second README/history remotely.
-2. Add `origin` and push main plus the checkpoint tags.
-3. Confirm the CI workflow runs successfully on GitHub. Local checks do not prove hosted CI success.
-4. Create milestones M0–M5 using the roadmap names. Avoid due dates until the relevant design/provider dependencies are resolved.
-5. Create labels and the project board described in M0-01. Use Backlog → Ready → In progress → In review → Done; track blockers with a label and dependency links.
-6. Create M0–M1 issues from BACKLOG, assign milestones, and link dependent issues.
-7. Enable a main-branch ruleset where supported: PR-based changes, required CI checks, blocked force pushes and deletion. Choose the actual check names from the first successful run.
-8. For a solo project, use CI and a recorded self-review; do not configure mandatory approvals in a way that prevents the owner from merging. Revisit independent review when another maintainer joins.
-9. Record repo, board, milestone and successful CI links in STATUS. Keep milestone completion based on acceptance evidence.
+- [Issues](https://github.com/Mickyj70/sky/issues) track scoped work and acceptance criteria.
+- [Milestones](https://github.com/Mickyj70/sky/milestones) follow M0–M5 in ROADMAP.
+- Use status labels: Backlog, Ready, In progress, and In review. Closed issues are Done.
+- Use type and priority labels to find the kind of work and the current critical path.
+- The integration cannot access GitHub Projects. A visual project board can be added when Projects access is available; milestones and labels remain usable now.
+- Pick a `good first issue` for a small contribution. Keep one core implementation issue In progress initially.
 
-If the intended private destination is confirmed, the initial CLI operation would be:
+## Changes and checks
 
-```sh
-# Run from the local project; this publishes committed source and documentation.
-gh repo create Mickyj70/sky --private --source=. --remote=origin --push
-# Push the already-created recovery tags explicitly.
-git push origin checkpoint/prototype-2026-11-15 checkpoint/planning-2026-11-15
-```
+Fork the repository and open focused PRs against main. The offline CI workflow uses read-only repository permissions and no provider secrets. Choose actual successful CI check names when configuring branch protection. For solo maintenance, require PRs/checks without requiring an impossible independent approval.
 
-If the repository name is already taken or the owner differs, inspect that destination and choose the correct repo rather than overwriting unrelated history.
+Link the issue in each PR, record acceptance evidence and rollback instructions, and update STATUS and CHANGELOG when appropriate. Prefer squash merges so a feature can be reverted as one coherent commit. Do not force-push shared main or move published checkpoint tags.
 
-## Daily progress
+At a milestone boundary, verify recovery, create an annotated checkpoint, and push it. Use Releases only for actual downloadable versions once distribution is implemented. A milestone target is not automatically a release.
 
-- Keep one implementation issue In progress initially.
-- Link the issue in its PR, including acceptance evidence and rollback instructions.
-- Merge only with passing checks; update STATUS and CHANGELOG in the same change when applicable.
-- At a milestone boundary, verify recovery, create an annotated checkpoint, and push the tag.
-- Use Releases for actual downloadable versions once distribution is implemented. A milestone target is not automatically a release.
+## Licensing and reporting
 
-## Before public distribution
+Code uses MIT; provider data terms remain separate. Follow CONTRIBUTING, CODE_OF_CONDUCT, and SECURITY. Keep keys, local data, and build artifacts out of Git. Use private vulnerability reporting rather than public exploit details.
 
-Choose the source-code license with the owner, verify provider attribution and redistribution terms, and review the installation/release instructions. No source license has been selected by this plan, and the provider's ODbL data license is not the code license.
+## Setup verification
+
+STATUS records the current hosted CI and branch protection results. A committed workflow definition alone does not prove that GitHub ran it. Future changes to repository settings must preserve fork contributions and offline checks.

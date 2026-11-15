@@ -2,6 +2,22 @@
 
 Start with [current status](docs/STATUS.md), then the [roadmap](docs/ROADMAP.md). New features should have an issue and acceptance criteria before implementation. The issue seed is [BACKLOG.md](docs/BACKLOG.md).
 
+## First contribution
+
+Fork [Mickyj70/sky](https://github.com/Mickyj70/sky), clone your fork, and add the upstream repository:
+
+```sh
+git clone https://github.com/YOUR_USERNAME/sky.git
+cd sky
+git remote add upstream https://github.com/Mickyj70/sky.git
+git fetch upstream
+git switch -c docs/my-improvement upstream/main
+```
+
+Replace `YOUR_USERNAME` with your GitHub account. Use an existing unassigned issue or open an issue for larger changes. A maintainer can help scope work; picking an issue does not guarantee assignment or a review deadline. Documentation and test improvements are welcome alongside features.
+
+Install Go 1.24+ and run the local checks below. No API key is needed for tests. Push your branch to your fork and open a PR against `Mickyj70/sky:main`. Direct write access to the upstream repository is not required.
+
 ## One change at a time
 
 1. Choose a Ready issue in the current milestone; mark it In progress.
@@ -32,3 +48,11 @@ go build -o bin/sky ./cmd/sky
 Record significant choices under `docs/decisions/` with context, decision, consequences, and status. Examples: storage driver, provider contracts, JSON compatibility, paid provider selection, or a hosted backend.
 
 During alpha development, document breaking changes before merging. Before 1.0, define the stable command/JSON contract and deprecation policy. Data migrations require the recovery plan in [RECOVERY.md](docs/RECOVERY.md).
+
+## Licensing and community
+
+By submitting a contribution, you agree to license it under this project's MIT license and confirm you have the right to contribute it. No CLA or DCO sign-off is required. Keep third-party license notices intact. Provider data licenses remain separate; use synthetic/minimal test fixtures rather than committing collected aircraft histories.
+
+Follow the [Code of Conduct](CODE_OF_CONDUCT.md). Report security concerns privately as described in [SECURITY.md](SECURITY.md). Never put an API key in an issue, PR, log, or fixture.
+
+Fork pull requests run offline checks with read-only repository permissions and do not receive maintainer secrets. Workflows must not execute untrusted PR code with privileged credentials. Maintainers may need to approve a first-time contributor's workflow run in GitHub.

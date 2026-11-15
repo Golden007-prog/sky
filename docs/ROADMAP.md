@@ -34,7 +34,7 @@ Versions below are proposed targets, not released artifacts. Complete one milest
 Deliver:
 
 - Git repository with prototype checkpoint, plan, decision log, changelog, and recovery instructions.
-- GitHub remote, issue backlog, milestones, and a simple project board.
+- Public GitHub remote, MIT licensing, contributor guidance, issue backlog, and milestones; use a project board when permissions allow.
 - CI for formatting, tests, race detection, vet, and compilation; automatic checks on PRs.
 - Small PR workflow with explicit acceptance criteria and validation evidence.
 - Defined output/error contract, provider boundary, and fixture coverage for current commands.
@@ -46,7 +46,7 @@ Exit criteria:
 - The prototype can be checked out and built in a separate worktree using the recovery guide.
 - Current behavior is documented, including regional airline filtering and missing data.
 
-Current status: local repository, checkpoints, project documentation, CI definition, and GitHub templates are prepared. GitHub publication, hosted CI execution, issue creation, branch rules, and contract hardening remain open.
+Current status: local repository, checkpoints, project documentation, CI definition, and GitHub templates are prepared. GitHub publication, hosted CI execution, issue creation, branch rules, and contract hardening remain open until publication setup completes.
 
 ### M1 — Saved tracking
 
